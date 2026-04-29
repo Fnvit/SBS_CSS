@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>에어비앤비</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #airbnb-list-container{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 20px;
+        }
+
+        #airbnb-list-container > li{
+            list-style: none;
+        }
+        #airbnb-list-container a{
+            color: black;
+            text-decoration: none;
+        }
+        /*************************************************************/
+        #airbnb-list-container .image-container{
+            position: relative;
+            width: 100%;
+            height: 250px;
+            background-color: red;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        #airbnb-list-container .image-container > img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        #airbnb-list-container .image-container .heart{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            border: none;
+            background-color: unset;
+            cursor: pointer;
+            color: red;
+        }
+        #airbnb-list-container .image-container .indicator{
+            width: 100%;
+            position: absolute;
+            bottom: 4px;
+            text-align: center;
+        }
+        #airbnb-list-container .image-container .indicator > button{
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            margin: 0 1px;
+            background-color: white;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+
+
+        /*************************************************************/
+        #airbnb-list-container .title-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+        #airbnb-list-container .detail{
+            font-size: 14px;
+            color: #3a3232;
+        }
+        #airbnb-list-container .content{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        #airbnb-list-container .price{
+            text-decoration: underline;
+        }
+        #airbnb-list-container .cancel{
+            display: inline-block;
+            padding: 2px;
+            border-radius: 10px;
+            background-color: #5c5555;
+            color: #d8d8d8;
+            font-size: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <ul id="airbnb-list-container">
+        <li>
+            <a href="#">
+                <section class="image-container">
+                    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1667352149269908440/original/87dc9897-913f-4b9b-b477-95b2802c7b76.png?im_w=720" alt="">
+                    <button class="heart">
+                        <i class="bi bi-heart-fill"></i>
+                    </button>
+                    <div class="indicator">
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                    </div>
+                </section>
+
+                <section class="info">
+                    <div class="title-container">
+                        <h4>서울의 호텔</h4>
+                        <b>
+                            <i class="bi bi-star-fill"></i>
+                            <span>신규</span>
+                        </b>
+                    </div>
+                    <div class="detail content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, asperiores at blanditiis commodi cum dicta illum ipsam iste iure labore magnam molestiae nobis reprehenderit sunt ullam ut velit veritatis voluptatum.</div>
+                    <div class="detail">침실1개·침대1개</div>
+                    <div class="detail">5월29일~31일</div>
+                    <div class="price">
+                        <span>총액</span>
+                        <b>&#8361;3,000,000</b>
+                    </div>
+                    <div class="cancel">취소수수료없음</div>
+                </section>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <section class="image-container">
+                    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1667352149269908440/original/87dc9897-913f-4b9b-b477-95b2802c7b76.png?im_w=720" alt="">
+                    <button class="heart">
+                        <i class="bi bi-heart-fill"></i>
+                    </button>
+                    <div class="indicator">
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                    </div>
+                </section>
+
+                <section class="info">
+                    <div class="title-container">
+                        <h4>서울의 호텔</h4>
+                        <b>
+                            <i class="bi bi-star-fill"></i>
+                            <span>신규</span>
+                        </b>
+                    </div>
+                    <div class="detail content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, asperiores at blanditiis commodi cum dicta illum ipsam iste iure labore magnam molestiae nobis reprehenderit sunt ullam ut velit veritatis voluptatum.</div>
+                    <div class="detail">침실1개·침대1개</div>
+                    <div class="detail">5월29일~31일</div>
+                    <div class="price">
+                        <span>총액</span>
+                        <b>&#8361;3,000,000</b>
+                    </div>
+                    <div class="cancel">취소수수료없음</div>
+                </section>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <section class="image-container">
+                    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1667352149269908440/original/87dc9897-913f-4b9b-b477-95b2802c7b76.png?im_w=720" alt="">
+                    <button class="heart">
+                        <i class="bi bi-heart-fill"></i>
+                    </button>
+                    <div class="indicator">
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                    </div>
+                </section>
+
+                <section class="info">
+                    <div class="title-container">
+                        <h4>서울의 호텔</h4>
+                        <b>
+                            <i class="bi bi-star-fill"></i>
+                            <span>신규</span>
+                        </b>
+                    </div>
+                    <div class="detail content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, asperiores at blanditiis commodi cum dicta illum ipsam iste iure labore magnam molestiae nobis reprehenderit sunt ullam ut velit veritatis voluptatum.</div>
+                    <div class="detail">침실1개·침대1개</div>
+                    <div class="detail">5월29일~31일</div>
+                    <div class="price">
+                        <span>총액</span>
+                        <b>&#8361;3,000,000</b>
+                    </div>
+                    <div class="cancel">취소수수료없음</div>
+                </section>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <section class="image-container">
+                    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1667352149269908440/original/87dc9897-913f-4b9b-b477-95b2802c7b76.png?im_w=720" alt="">
+                    <button class="heart">
+                        <i class="bi bi-heart-fill"></i>
+                    </button>
+                    <div class="indicator">
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                    </div>
+                </section>
+
+                <section class="info">
+                    <div class="title-container">
+                        <h4>서울의 호텔</h4>
+                        <b>
+                            <i class="bi bi-star-fill"></i>
+                            <span>신규</span>
+                        </b>
+                    </div>
+                    <div class="detail content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, asperiores at blanditiis commodi cum dicta illum ipsam iste iure labore magnam molestiae nobis reprehenderit sunt ullam ut velit veritatis voluptatum.</div>
+                    <div class="detail">침실1개·침대1개</div>
+                    <div class="detail">5월29일~31일</div>
+                    <div class="price">
+                        <span>총액</span>
+                        <b>&#8361;3,000,000</b>
+                    </div>
+                    <div class="cancel">취소수수료없음</div>
+                </section>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <section class="image-container">
+                    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1667352149269908440/original/87dc9897-913f-4b9b-b477-95b2802c7b76.png?im_w=720" alt="">
+                    <button class="heart">
+                        <i class="bi bi-heart-fill"></i>
+                    </button>
+                    <div class="indicator">
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                    </div>
+                </section>
+
+                <section class="info">
+                    <div class="title-container">
+                        <h4>서울의 호텔</h4>
+                        <b>
+                            <i class="bi bi-star-fill"></i>
+                            <span>신규</span>
+                        </b>
+                    </div>
+                    <div class="detail content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, asperiores at blanditiis commodi cum dicta illum ipsam iste iure labore magnam molestiae nobis reprehenderit sunt ullam ut velit veritatis voluptatum.</div>
+                    <div class="detail">침실1개·침대1개</div>
+                    <div class="detail">5월29일~31일</div>
+                    <div class="price">
+                        <span>총액</span>
+                        <b>&#8361;3,000,000</b>
+                    </div>
+                    <div class="cancel">취소수수료없음</div>
+                </section>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <section class="image-container">
+                    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1667352149269908440/original/87dc9897-913f-4b9b-b477-95b2802c7b76.png?im_w=720" alt="">
+                    <button class="heart">
+                        <i class="bi bi-heart-fill"></i>
+                    </button>
+                    <div class="indicator">
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                    </div>
+                </section>
+
+                <section class="info">
+                    <div class="title-container">
+                        <h4>서울의 호텔</h4>
+                        <b>
+                            <i class="bi bi-star-fill"></i>
+                            <span>신규</span>
+                        </b>
+                    </div>
+                    <div class="detail content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, asperiores at blanditiis commodi cum dicta illum ipsam iste iure labore magnam molestiae nobis reprehenderit sunt ullam ut velit veritatis voluptatum.</div>
+                    <div class="detail">침실1개·침대1개</div>
+                    <div class="detail">5월29일~31일</div>
+                    <div class="price">
+                        <span>총액</span>
+                        <b>&#8361;3,000,000</b>
+                    </div>
+                    <div class="cancel">취소수수료없음</div>
+                </section>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <section class="image-container">
+                    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1667352149269908440/original/87dc9897-913f-4b9b-b477-95b2802c7b76.png?im_w=720" alt="">
+                    <button class="heart">
+                        <i class="bi bi-heart-fill"></i>
+                    </button>
+                    <div class="indicator">
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                    </div>
+                </section>
+
+                <section class="info">
+                    <div class="title-container">
+                        <h4>서울의 호텔</h4>
+                        <b>
+                            <i class="bi bi-star-fill"></i>
+                            <span>신규</span>
+                        </b>
+                    </div>
+                    <div class="detail content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, asperiores at blanditiis commodi cum dicta illum ipsam iste iure labore magnam molestiae nobis reprehenderit sunt ullam ut velit veritatis voluptatum.</div>
+                    <div class="detail">침실1개·침대1개</div>
+                    <div class="detail">5월29일~31일</div>
+                    <div class="price">
+                        <span>총액</span>
+                        <b>&#8361;3,000,000</b>
+                    </div>
+                    <div class="cancel">취소수수료없음</div>
+                </section>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <section class="image-container">
+                    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1667352149269908440/original/87dc9897-913f-4b9b-b477-95b2802c7b76.png?im_w=720" alt="">
+                    <button class="heart">
+                        <i class="bi bi-heart-fill"></i>
+                    </button>
+                    <div class="indicator">
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                    </div>
+                </section>
+
+                <section class="info">
+                    <div class="title-container">
+                        <h4>서울의 호텔</h4>
+                        <b>
+                            <i class="bi bi-star-fill"></i>
+                            <span>신규</span>
+                        </b>
+                    </div>
+                    <div class="detail content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, asperiores at blanditiis commodi cum dicta illum ipsam iste iure labore magnam molestiae nobis reprehenderit sunt ullam ut velit veritatis voluptatum.</div>
+                    <div class="detail">침실1개·침대1개</div>
+                    <div class="detail">5월29일~31일</div>
+                    <div class="price">
+                        <span>총액</span>
+                        <b>&#8361;3,000,000</b>
+                    </div>
+                    <div class="cancel">취소수수료없음</div>
+                </section>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <section class="image-container">
+                    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1667352149269908440/original/87dc9897-913f-4b9b-b477-95b2802c7b76.png?im_w=720" alt="">
+                    <button class="heart">
+                        <i class="bi bi-heart-fill"></i>
+                    </button>
+                    <div class="indicator">
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                    </div>
+                </section>
+
+                <section class="info">
+                    <div class="title-container">
+                        <h4>서울의 호텔</h4>
+                        <b>
+                            <i class="bi bi-star-fill"></i>
+                            <span>신규</span>
+                        </b>
+                    </div>
+                    <div class="detail content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, asperiores at blanditiis commodi cum dicta illum ipsam iste iure labore magnam molestiae nobis reprehenderit sunt ullam ut velit veritatis voluptatum.</div>
+                    <div class="detail">침실1개·침대1개</div>
+                    <div class="detail">5월29일~31일</div>
+                    <div class="price">
+                        <span>총액</span>
+                        <b>&#8361;3,000,000</b>
+                    </div>
+                    <div class="cancel">취소수수료없음</div>
+                </section>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <section class="image-container">
+                    <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-1667352149269908440/original/87dc9897-913f-4b9b-b477-95b2802c7b76.png?im_w=720" alt="">
+                    <button class="heart">
+                        <i class="bi bi-heart-fill"></i>
+                    </button>
+                    <div class="indicator">
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                    </div>
+                </section>
+
+                <section class="info">
+                    <div class="title-container">
+                        <h4>서울의 호텔</h4>
+                        <b>
+                            <i class="bi bi-star-fill"></i>
+                            <span>신규</span>
+                        </b>
+                    </div>
+                    <div class="detail content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, asperiores at blanditiis commodi cum dicta illum ipsam iste iure labore magnam molestiae nobis reprehenderit sunt ullam ut velit veritatis voluptatum.</div>
+                    <div class="detail">침실1개·침대1개</div>
+                    <div class="detail">5월29일~31일</div>
+                    <div class="price">
+                        <span>총액</span>
+                        <b>&#8361;3,000,000</b>
+                    </div>
+                    <div class="cancel">취소수수료없음</div>
+                </section>
+            </a>
+        </li>
+    </ul>
+</body>
+</html>
