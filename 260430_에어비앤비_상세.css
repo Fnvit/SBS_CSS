@@ -1,0 +1,291 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+/****************************************/
+main{
+    width: 1100px;
+    margin: 0 auto;
+}
+/*********************************************/
+#main-header-section > header{
+    display: flex;
+    margin-bottom: 20px;
+    padding: 4px 0;
+}
+#main-header-section > header > h1{
+    flex: 1;
+    font-size: 28px;
+}
+#main-header-section header .main-btn-container{
+    display: flex;
+    align-items: flex-end;
+}
+
+#main-header-section header button{
+    margin-left: 4px;
+    border: none;
+    background-color: white;
+    padding: 6px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    &:hover{
+        background-color: rgba(0,0,0, 0.1);
+    }
+}
+
+#main-header-section header button > span{
+    text-decoration: underline;
+}
+
+#main-header-section .main-img-container{
+    position: relative;
+    display: grid;
+    grid-template-areas:
+            'img1 img1 img2 img3'
+            'img1 img1 img4 img5';
+    grid-template-rows: 220px 220px;
+    grid-gap: 6px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#main-header-section .main-img-container > button{
+    border: none;
+    background: none;
+    cursor: pointer;
+    &:hover{
+        filter: brightness(0.8);
+    }
+
+    &:nth-child(1){
+        grid-area: img1;
+    }
+    &:nth-child(2){
+        grid-area: img2;
+    }
+    &:nth-child(3){
+        grid-area: img3;
+    }
+    &:nth-child(4){
+        grid-area: img4;
+    }
+    &:nth-child(5){
+        grid-area: img5;
+    }
+}
+
+#main-header-section .main-img-container > button > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#main-header-section .main-img-container > button.all-img-btn{
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    background-color: rgb(243 243 243);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/*********************************************************/
+#main-information-section{
+    display: flex;
+    padding: 10px 0;
+}
+#main-information-section > .information-container{
+    flex: 3;
+    margin-bottom: 20px;
+}
+#main-information-section .box{
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    background-color: lightgoldenrodyellow;
+    margin: 20px 0;
+}
+#main-information-section > .information-container header span:not(:last-child)::after{
+    content: '·';
+    margin: 0 1px;
+}
+#main-information-section .convenience-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+/********************************************************/
+#main-information-section > .price-container{
+    position: relative;
+    flex: 2;
+    padding: 20px;
+}
+#main-information-section > .price-container form{
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.1);
+}
+#main-information-section > .price-container form strong{
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+#main-information-section > .price-container form strong > span:first-child{
+    font-size: 20px;
+    font-weight: normal;
+}
+
+#main-information-section > .price-container .input-container{
+    display: grid;
+    margin: 30px 0;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid black;
+}
+#main-information-section > .price-container .input-container label{
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+    border: 1px solid black;
+}
+#main-information-section > .price-container .input-container label:nth-child(1){
+}
+#main-information-section > .price-container .input-container label:nth-child(2){
+}
+#main-information-section > .price-container .input-container label:nth-child(3){
+    grid-column: 1 / 3;
+}
+
+#main-information-section > .price-container .input-container span{
+    font-size: 12px;
+}
+#main-information-section > .price-container .input-container input{
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    background: none;
+    outline: none;
+}
+#main-information-section > .price-container .input-container select{
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    background: none;
+    outline: none;
+}
+#main-information-section > .price-container .text{
+    background-color: #f3f3f3;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    text-align: center;
+    margin: 12px 0;
+}
+#main-information-section > .price-container button[type=submit]{
+    display: block;
+    width: 100%;
+    background-color: orangered;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    &:hover{
+        opacity: 0.9;
+    }
+}
+
+/********************************************************/
+#main-footer{
+    margin-top: 60px;
+    padding: 40px;
+    border-top: 1px solid #dddddd;
+    background-color: #f7f7f7;
+    border-radius: 20px 20px 0 0;
+}
+
+#main-footer .footer-top{
+    margin-bottom: 30px;
+}
+
+#main-footer .footer-top h2{
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+#main-footer .footer-top p{
+    color: #666666;
+}
+
+#main-footer .footer-menu-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #dddddd;
+}
+
+#main-footer .footer-menu{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+#main-footer .footer-menu h3{
+    margin-bottom: 6px;
+    font-size: 16px;
+}
+
+#main-footer .footer-menu a{
+    color: #555555;
+    font-size: 14px;
+}
+
+#main-footer .footer-menu a:hover{
+    text-decoration: underline;
+}
+
+#main-footer .footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    color: #555555;
+    font-size: 14px;
+}
+
+#main-footer .footer-sns{
+    display: flex;
+    gap: 18px;
+    font-size: 20px;
+}
+
+#main-footer .footer-sns i{
+    cursor: pointer;
+}
+
+#main-footer .footer-sns i:hover{
+    color: orangered;
+}
+
+
+
+
